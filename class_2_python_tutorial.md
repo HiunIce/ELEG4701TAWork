@@ -11,16 +11,14 @@ Recommended Reading:
 
 [Docs of Python (English)](https://docs.python.org/3/tutorial/)
 
-[Docs of Python (Chinese traditional)](https://docs.python.org/zh-tw/3/tutorial/index.html)
-
-[Liao Xue Feng's Python Tutorial  (Chineses simplified)](https://www.liaoxuefeng.com/wiki/1016959663602400)
+[Liao's Python Tutorial  (Example codes)](https://github.com/michaelliao/learn-python3/tree/master/samples)
 
 -----
 
 ## Part 0. Guide line of self-evaluation
 
 If you are familar with python, just jump to 
-part 3
+part 2
 ####  Environment and install
 ```python
 # Basically, you have three way to get a python environment.
@@ -34,7 +32,7 @@ pip install numpy
 # In this case, you installed numpy for your environment.
 # Similarily, you can use pip uninstall xxx to remove a package.
 ```
-#### Q0. If you know the purpose of the following code, jump to part 3
+#### Q0. If you know the purpose of the following code, jump to part 2
 ```python
 c = "#"+"".join([random.choice('0123456789ABCDEF') for x in range(6)])
 print(c)
@@ -48,6 +46,7 @@ a = 1
 b = '1'
 print(a == b, type(a), type(b), type(a == b))
 # the result is"False, <class 'int'>, <class 'str'>, <class 'bool'>"
+# if you have problem with this, please read note_1
 ```
 #### Q2. Logic and Functions
 ```python
@@ -106,6 +105,7 @@ other kw: {}
 
 #### Q3. Inheritance and composition
 ```python
+
 
 ```
 
