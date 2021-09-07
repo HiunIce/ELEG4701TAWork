@@ -105,24 +105,53 @@ other kw: {}
 
 #### Q3. Inheritance and composition
 ```python
-
-class BasicClass():
-    def __init__():
+class BaseClass():
+    def __init__(self):
         self.basic_sth = 0
+    
+    def print_self(self):
+        print(type(self) ,'Functions will be inherited by default')
+    
+    def __lalala(self):
+        print(type(self), 'it could not be inherited because you write __ in the functin name')
+    
+    @staticmethod
+    def sfunc():
+        print('this function do not needs self, because it belongs to Class, not object')
+        print('call it by BasicClass.sfunc()')
 
-class A(BasicClass):
-    def __init__():
+class A(BaseClass):
+    def __init__(self):
+        super().__init__() # called __init__ of super class
         self.a_sth = 1
 
-class B(BasicClas):
-    def __init__():
+class B(BaseClass):
+    def __init__(self):
+        # if you do not write super().__init__() here, you can not use basic_sth from the baseclass
         self.b_sth = 2
+    
 
-
+c = BaseClass()
 a = A()
 b = B()
-print(a)
-print(b)
+
+c.print_self()
+a.print_self()
+b.print_self()
+
+BaseClass.sfunc()
+# or you can use
+a.sfunc()
+b.sfunc()
+c.sfunc()
+
+
+print(c.basic_sth)
+print(a.basic_sth, a.a_sth)
+print( b.b_sth)
+
+# try to imagine the output
+# and run toy_script/try_q3.py
 
 ```
 
