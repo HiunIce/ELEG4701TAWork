@@ -1,16 +1,41 @@
 # !/usr/bin/env python3
 # -*- coding: utf-8 -*-
+
+
 # @Author: dong
 # @Date: 2018-07-05 19:37:42
 # @Env: python 3.6
 # @Github: https://github.com/PerpetualSmile
 
 
+# Modified by [Your Name] [Your SID]
+# Submit Time:[]
+# For assignment of ELEG4701 CUHK
+
+
 '''
 
-Assignment: change this doraemon into origin version
+TODO: change this doraemon into origin version(with ears, yellow skin)
 
+* Besides, you can do everything you want, such as change the pose, add decorations,
+  or even draw another anime character, and you will get a higher score.
 
+'''
+
+'''
+You Need to Know:
+codes like '#ffffff' are hexadecimal color codes,
+usually used to represent colors in html.
+In the RGB model of computer, every two digits in #rrggbb represents a number. 
+Each number is in hexadecimal(0~F)
+#000000 represents pure black
+#FFFFFF represents pure white
+'''
+
+'''
+If you donot know what is a function stand for
+Please search it in google. Eg: 'python turtle seth'
+or you can use help(seth)
 '''
 
 from turtle import *
@@ -101,7 +126,7 @@ def nose():
     end_fill()
 
 
-def black_eyes():
+def wink():
     seth(0)
     my_goto(-20, 195)
     fillcolor('#000000')
@@ -210,11 +235,6 @@ def body_handsup():
     seth(30)
     fd(40)
     end_fill()
-
-
-def body():
-    
-   # body_handsup()
     
 
     seth(70)
@@ -223,6 +243,17 @@ def body():
     circle(-30)
     end_fill()
 
+    
+    my_goto(-133.97, -91.81)
+    seth(50)
+    fillcolor('#ffffff')
+    begin_fill()
+    circle(30)
+    end_fill()
+
+
+def foot():
+    
     my_goto(103.74, -182.59)
     seth(0)
     fillcolor('#ffffff')
@@ -245,12 +276,9 @@ def body():
     fd(10)
     end_fill()
 
-    my_goto(-133.97, -91.81)
-    seth(50)
+def bag():
+    
     fillcolor('#ffffff')
-    begin_fill()
-    circle(30)
-    end_fill()
 
     my_goto(-103.42, 15.09)
     seth(0)
@@ -271,6 +299,8 @@ def body():
     my_goto(-103.42, 15.09)
     fd(90)
     seth(70)
+
+def bell():
     fillcolor('#ffd200')
     # print(pos())
     begin_fill()
@@ -294,24 +324,34 @@ def body():
     dot(10)
     my_goto(0, -150)
 
-def Doraemon():
-    # head()
-    # scarf()
-    # face()
-    # nose()
-    # mouth()
-    # beard()
-    body()
+def body():
+    body_handsup()
+    foot()
+    bag()
+    bell()
 
-    # 画眼睛
-    black_eyes()
+
+
+def Doraemon():
+    head()
+    scarf()
+    face()
+    nose()
+    mouth()
+    beard()
+    body()
+    wink()
 
 
 if __name__ == '__main__':
     screensize(800, 600, "#f0f0f0")
     pensize(3)  
-    speed(9)
+    speed(90) # speed of painting
+
     Doraemon()
+
+    #draw your name
     my_goto(100, -300)
-    write('by dongdong', font=("Bradley Hand ITC", 30, "bold"))
+    write('In put your SID and Name Here',\
+         font=("Bradley Hand ITC", 30, "bold"))
     mainloop()

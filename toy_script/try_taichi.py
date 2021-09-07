@@ -1,6 +1,22 @@
 # Code from [yuanming Hu](https://zhuanlan.zhihu.com/p/97700605)
 # pip install taichi first.
 
+
+'''
+This script is a typical data-driven programming codes,
+you may not understand it at all. 
+But try to run and play with it. 
+Hope you can find its interesting.
+
+* Data-oriented programming has extremely high executing speed and low readability. 
+Please not to use this programming paradigm as far as you can. 
+However, when you encountered an efficiency bottleneck 
+and the experiment cannot be finished as a result.
+Try to use it and you'd better write it with C, Cpp templates or Cuda code. 
+
+'''
+
+
 import taichi as ti
 import numpy as np
 ti.init(arch=ti.gpu) # Try to run on GPU

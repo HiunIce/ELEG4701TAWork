@@ -2,6 +2,18 @@
 # pip install pygame, and run this script
 # Code copied from https://github.com/howardjchen/RRT
 
+
+'''
+This script shows how RRT works.
+If you are interested in the robot navigation algorithm,
+you can try this algorithm and try to modify it to make it more efficient.
+
+But if you just want to learn python, 
+I don't recommend you to read this code in details.
+'''
+
+
+
 import math, sys, pygame, random
 from math import *
 from pygame import *

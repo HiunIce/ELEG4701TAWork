@@ -5,10 +5,17 @@
 # @Env: python 3.6
 # @Github: https://github.com/PerpetualSmile
 
-# I choose this script, because you can clearly 
-# see how these code draw a Character.
+# I choose this script, as an example of [Process Oriented] coding
+# You can clearly see how these code draw a doraemon step by step.
 # You can modify it and draw something you like
+# * codes are modified from the origin version
 
+'''
+
+Assignment: change this doraemon into origin version
+
+
+'''
 
 from turtle import *
 
@@ -98,7 +105,7 @@ def nose():
     end_fill()
 
 
-def black_eyes():
+def wink():
     seth(0)
     my_goto(-20, 195)
     fillcolor('#000000')
@@ -157,15 +164,7 @@ def head():
     circle(150, 280)
     end_fill()
 
-
-def Doraemon():
-    head()
-    scarf()
-    face()
-    nose()
-    mouth()
-    beard()
-    #body
+def body_handsup():
     my_goto(0, 0)
     seth(0)
     penup()
@@ -215,6 +214,7 @@ def Doraemon():
     seth(30)
     fd(40)
     end_fill()
+    
 
     seth(70)
     fillcolor('#ffffff')
@@ -222,6 +222,17 @@ def Doraemon():
     circle(-30)
     end_fill()
 
+    
+    my_goto(-133.97, -91.81)
+    seth(50)
+    fillcolor('#ffffff')
+    begin_fill()
+    circle(30)
+    end_fill()
+
+
+def foot():
+    
     my_goto(103.74, -182.59)
     seth(0)
     fillcolor('#ffffff')
@@ -244,12 +255,9 @@ def Doraemon():
     fd(10)
     end_fill()
 
-    my_goto(-133.97, -91.81)
-    seth(50)
+def bag():
+    
     fillcolor('#ffffff')
-    begin_fill()
-    circle(30)
-    end_fill()
 
     my_goto(-103.42, 15.09)
     seth(0)
@@ -270,6 +278,8 @@ def Doraemon():
     my_goto(-103.42, 15.09)
     fd(90)
     seth(70)
+
+def bell():
     fillcolor('#ffd200')
     # print(pos())
     begin_fill()
@@ -293,15 +303,34 @@ def Doraemon():
     dot(10)
     my_goto(0, -150)
 
-    # 画眼睛
-    black_eyes()
+def body():
+    
+    body_handsup()
+    foot()
+    bag()
+    bell()
+
+
+
+def Doraemon():
+    head()
+    scarf()
+    face()
+    nose()
+    mouth()
+    beard()
+    body()
+    wink()
 
 
 if __name__ == '__main__':
     screensize(800, 600, "#f0f0f0")
     pensize(3)  
-    speed(9)
+    speed(90) # speed of painting
+
     Doraemon()
+
+    #draw your name
     my_goto(100, -300)
-    write('by dongdong', font=("Bradley Hand ITC", 30, "bold"))
+    write('by dongdong', font=("Bradley Hand ITC", 30, "bold")) # author of origin codes
     mainloop()
