@@ -160,8 +160,7 @@ def head():
     circle(150, 280)
     end_fill()
 
-def body():
-    
+def body_handsup():
     my_goto(0, 0)
     seth(0)
     penup()
@@ -211,6 +210,12 @@ def body():
     seth(30)
     fd(40)
     end_fill()
+
+
+def body():
+    
+   # body_handsup()
+    
 
     seth(70)
     fillcolor('#ffffff')
@@ -290,12 +295,12 @@ def body():
     my_goto(0, -150)
 
 def Doraemon():
-    head()
-    scarf()
-    face()
-    nose()
-    mouth()
-    beard()
+    # head()
+    # scarf()
+    # face()
+    # nose()
+    # mouth()
+    # beard()
     body()
 
     # 画眼睛
