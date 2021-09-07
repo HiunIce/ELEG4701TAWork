@@ -23,8 +23,10 @@ will make students more interested in coding.)
 
 """
 
+from numpy.random.mtrand import random
 import cv2
 import numpy as np
+import itertools
 
 
 class MainWindow:
@@ -114,7 +116,9 @@ class GameLogic:
         for emitter in self.emitterList:
             # 0,3 is for skip emit if random number is 2
             emitter.emit(np.random.randint(0, 3, size=1))
-        for b in self.bulletList:
+            print(self.bulletList.__len__())
+        deleteList = []
+        for idx, b in enumerate(self.bulletList):
             b.pos += b.speed
             b.speed += b.acc
 
@@ -123,11 +127,17 @@ class GameLogic:
             # see what will happens
 
             if (b.pos[0] > self.w) or (b.pos[1] > self.h) \
-                    or (b.pos[0] < 0) or (b.pos[1]) < 0:
-                del b
+                    or (b.pos[0] < 0) or (b.pos[1] < 0):
+                deleteList.append(idx)
+                print('conti')
                 continue
             # print(b.pos, b.radius, b.color, len(self.bulletList))
             cv2.circle(self.canvas, b.pos.astype(int), b.radius, b.color, 0)
+        
+        #print(deleteList, 'del')
+        idx = list(set(list(range(len(self.bulletList)))) - set(deleteList))
+        print(idx)
+        #self.bulletList = [self.bulletList[i] for i in idx]
 
 
 if __name__ == '__main__':
