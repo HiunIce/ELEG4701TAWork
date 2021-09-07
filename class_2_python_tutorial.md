@@ -106,6 +106,23 @@ other kw: {}
 #### Q3. Inheritance and composition
 ```python
 
+class BasicClass():
+    def __init__():
+        self.basic_sth = 0
+
+class A(BasicClass):
+    def __init__():
+        self.a_sth = 1
+
+class B(BasicClas):
+    def __init__():
+        self.b_sth = 2
+
+
+a = A()
+b = B()
+print(a)
+print(b)
 
 ```
 
