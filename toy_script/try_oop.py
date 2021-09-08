@@ -21,6 +21,10 @@ will make students more interested in coding.)
 @ 40 pts for TODO 1
 @ 40 pts for TODO 2
 
+Submitting bugs and issues are welcomed; 
+it will make this homework project better.
+You can email me or submit an issue directly on GitHub.
+I will give you extra points.
 """
 
 from numpy.random.mtrand import random
@@ -69,18 +73,20 @@ class BaseBullet:
         self.acc = acc.astype(np.float64)
         self.radius = 3
         self.color = np.array([128, 128, 128])
+        self.linewidth = 0
 
 
 class BulletA(BaseBullet):
     def __init__(self, pos, direction: np.ndarray) -> None:
         super().__init__(pos, 5 * direction, np.array([0, 0]))
-        self.color = [128, 128, 0]
+        self.color = np.random.randint(0,255, 3).tolist() #[128, 128, 0]
+        self.linewidth=-1 # filled
 
 
 class BulletB(BaseBullet):
     def __init__(self, pos, direction: np.ndarray) -> None:
         super().__init__(pos, np.array([0, 0]), 5 * direction)
-        self.radius = 5
+        self.radius = 10
         self.color = [128, 0, 128]
 
 # TODO 1: made a class BulletC, and add something you like in it (40 pts)
@@ -116,7 +122,6 @@ class GameLogic:
         for emitter in self.emitterList:
             # 0,3 is for skip emit if random number is 2
             emitter.emit(np.random.randint(0, 3, size=1))
-            print(self.bulletList.__len__())
         deleteList = []
         for idx, b in enumerate(self.bulletList):
             b.pos += b.speed
@@ -129,15 +134,17 @@ class GameLogic:
             if (b.pos[0] > self.w) or (b.pos[1] > self.h) \
                     or (b.pos[0] < 0) or (b.pos[1] < 0):
                 deleteList.append(idx)
-                print('conti')
                 continue
             # print(b.pos, b.radius, b.color, len(self.bulletList))
-            cv2.circle(self.canvas, b.pos.astype(int), b.radius, b.color, 0)
+            cv2.circle(self.canvas, b.pos.astype(int), b.radius, b.color, b.linewidth)
         
-        #print(deleteList, 'del')
+
+        # You can think about the use of following codes
+        # and use #(ctrl+/) to comment them, run the script and see what will happen
         idx = list(set(list(range(len(self.bulletList)))) - set(deleteList))
-        print(idx)
-        #self.bulletList = [self.bulletList[i] for i in idx]
+        self.bulletList = [self.bulletList[i] for i in idx]
+        for e in self.emitterList:
+            e.area = self.bulletList
 
 
 if __name__ == '__main__':
