@@ -99,7 +99,7 @@ class Emitter:
         self.pos = np.array(pos, dtype=np.float)
 
     def emit(self, t):
-        # TODO 2: do not forget to add bullet type in here
+        # TODO 1: do not forget to add bullet type in here
         if t == 0:
             self.area.append(BulletA(self.pos, np.random.rand(2) - 0.5))
         if t == 1:
@@ -128,7 +128,7 @@ class GameLogic:
             b.speed += b.acc
 
             # here is a simple logic, if the bullet click the wall, kill it
-            # TODO: Try to add collision detection for wall in North and South (40pts)
+            # TODO 2: Try to add collision detection for wall in North and South (40pts)
             # see what will happens
 
             if (b.pos[0] > self.w) or (b.pos[1] > self.h) \
