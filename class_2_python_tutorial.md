@@ -157,13 +157,23 @@ print( b.b_sth)
 
 ## Part 1. Python Tutorial for Robot
 
-## Part 2. Advanced programming skills
+## Part 2. Advanced programming skills (Briefly)
 
 ### A. Ways to acceleate calculation
+  ** Numpy->Cupy
+  ** Numpy->dll
+  ** Numpy->Cuda
+  ** Numpy->pytorch-gpu
+  ** Cython
 
 ### B. Using pyinstaller to package your program
+  ** pyinstaller -D -w --key [your key] [xxxx.py]
 
+  ** pyinstxtractor
+
+  ** Compile your python with cython
 ### C. Using PySide2(pyqt) to make a user interface
+  ** TODO:
 
 ### D. Try some interesting works
 
