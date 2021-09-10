@@ -160,10 +160,10 @@ print( b.b_sth)
 ## Part 2. Advanced programming skills (Briefly)
 
 ### A. Ways to acceleate calculation
-  ** Numpy->Cupy
-  ** Numpy->dll
-  ** Numpy->Cuda
-  ** Numpy->pytorch-gpu
+  ** Numpy->Cupy<br><br>
+  ** Numpy->dll<br><br>
+  ** Numpy->Cuda<br><br>
+  ** Numpy->pytorch-gpu<br><br>
   ** Cython
 
 ### B. Using pyinstaller to package your program
@@ -173,7 +173,12 @@ print( b.b_sth)
 
   ** Compile your python with cython
 ### C. Using PySide2(pyqt) to make a user interface
-  ** TODO:
+   <img src="imgs/pyqt_example.png" width = "300" height = "300" alt="Pyqt_Eaxmple" align=center />
+
+   This is an pyqt demo for 1-d signal annotation. The codes writing for user interfaces is usually object-oriented. Because this coding style can maintain an user interface easily.
+   
+   At the same time, because python has 'duck type', it is easier to write an interface than other languages like Cpp or Java. 
+   Here is only a brief introduction. If you are interested in making UI, you can also read how to use languages designed for making UI like html, qml and other  designed (they can communicate with python easily).
 
 ### D. Try some interesting works
 
