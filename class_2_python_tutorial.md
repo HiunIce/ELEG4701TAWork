@@ -169,7 +169,6 @@ print( b.b_sth)
         close_frige()
 
 ```
-    b. 
 
 ```python
     # B. Object oriented programming
