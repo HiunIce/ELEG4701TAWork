@@ -4,7 +4,7 @@
 TA:  Li Ang (psw.liang@link.cuhk.edu.hk)
 
 -----
-* This tutorial is consists of basic python guideline, python tutorial for robot stuffs, and Advanced programming skills
+* This tutorial is consists of basic python guideline, introduction to basic programming paradigm, and Advanced programming skills
 
 
 Recommended Reading:
@@ -155,7 +155,58 @@ print( b.b_sth)
 
 ```
 
-## Part 1. Python Tutorial for Robot
+## Part 1. Basic Programming Paradigm
+    As a python beginner, you only need to understand process-oriented and object-oriented. I will show how to work with different paradigms using the example of 'how to put elephants in the frige.'
+
+```python
+    # A. Process oriented programming
+
+    def main():
+        # the flow chart is always:
+        # do [action] to [sth]
+        open_frige() 
+        let_in(elephant_data)
+        close_frige()
+
+```
+    b. 
+
+```python
+    # B. Object oriented programming
+
+    class BaseFrige:
+        def __init__():
+            self.container = []
+        def __open(self)
+            pass
+        def __close(self)
+            pass
+        def put(self, target):
+            self.open()
+            self.container.append(target)
+            self.close()
+    
+    class Siemens(BaseFrige):
+        pass
+    class Midea(BaseFrige):
+        pass
+
+    class Animal:
+        pass
+    class Lion(Animal):
+        pass
+    class Elephant(Animal):
+        pass
+
+    def main():
+        # in this case, 
+        # The frige can hide thier open, and close fucntion
+        # Besdies, you can made many different frige, and all of them can do the same things.
+        e = Siemens() #or Midea()
+        e.put(Elephant())
+
+```    
+
 
 ## Part 2. Advanced programming skills (Briefly)
 
