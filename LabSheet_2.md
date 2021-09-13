@@ -50,3 +50,31 @@ In this part, you should **modify the hw_oop_coding**, and finish **all the TODO
 <br><br><br>
 <font size=4> Checked by TA ________________.</font>
 <br><br>
+
+
+## Part 4 When You Meet a hard question
+
+<font size=4>&ensp;&ensp;
+In this part, you should **modify the hw_oop_coding**, and add a bullet like following.
+
+<br> Requirements:
+<br> 0. Design complex bullets, which can be fireworks, lasers, or even animated pictures. (At least as complicated as  the stars below)
+<br> <br>
+<br> 1. Change the trajectory, not a straight line anymore.
+
+ <img src="imgs/star_bullet.png"  alt="sanae" width = "300" height = "300"  align=center />
+
+
+<br> Tips:
+<br> 0. Regard it as the problem you encountered in your research. Feel free to discuss , copy the code from GitHub (but you **can not** directly copy the code **from the classmate present**)
+
+<br>1. Think about **Newton's laws of motion**. If you want to make a beautiful trajectory, you may need to change the acceleration.
+</font>
+
+
+
+<br><br><br>
+<font size=4> Your Bullet Name   ________________.</font>
+<br>
+<font size=4> Checked by TA ________________.</font>
+<br><br>
